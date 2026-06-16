@@ -6,20 +6,21 @@ mysql -u root -p
 Then run these commands:
 
 #### Create the user
+Use `%` if you want to connect database remotetly
 ```SQL
-CREATE USER 'nextuser'@'localhost' IDENTIFIED BY 'StrongPassword123!';
+CREATE USER 'nextuser'@'%' IDENTIFIED BY 'StrongPassword123!';
 ```
 **OR** 
 If you are useing Docker
 ```SQL
-CREATE USER 'nextuser'@'%' IDENTIFIED BY 'StrongPassword123!';
+CREATE USER 'nextuser'@'localhost' IDENTIFIED BY 'StrongPassword123!';
 ```
  
 #### Create database & Grant permissions
 ```SQL
 CREATE DATABASE your_database_name;
 SHOW DATABASES;
-GRANT ALL PRIVILEGES ON your_database_name.* TO 'nextuser'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'trendoza_user'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
