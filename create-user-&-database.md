@@ -9,6 +9,11 @@ Then run these commands:
 ```SQL
 CREATE USER 'nextuser'@'localhost' IDENTIFIED BY 'StrongPassword123!';
 ```
+**OR** 
+If you are useing Docker
+```SQL
+CREATE USER 'nextuser'@'%' IDENTIFIED BY 'StrongPassword123!';
+```
  
 #### Create database & Grant permissions
 ```SQL
