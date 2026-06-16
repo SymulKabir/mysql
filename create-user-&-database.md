@@ -18,6 +18,7 @@ CREATE USER 'nextuser'@'%' IDENTIFIED BY 'StrongPassword123!';
 #### Create database & Grant permissions
 ```SQL
 CREATE DATABASE your_database_name;
+SHOW DATABASES;
 GRANT ALL PRIVILEGES ON your_database_name.* TO 'nextuser'@'localhost';
 FLUSH PRIVILEGES;
 ```
